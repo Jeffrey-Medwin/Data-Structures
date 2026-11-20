@@ -14,14 +14,14 @@ public class ThreeSum {
 
         int n = nums.length;
 
+        // Two Pointer Approach requires sorted array
         Arrays.sort(nums);
 
         for (int left = 0; left < n - 2; left++) {
-            
+            // ignoring the duplicate values
             if (left > 0 && nums[left] == nums[left - 1]) {
                 continue;
             }
-
 
             int mid = left + 1;
             int right = n - 1;
@@ -33,14 +33,17 @@ public class ThreeSum {
                 if (sum == 0) {
                     result.add(Arrays.asList(nums[left], nums[mid], nums[right]));
 
+                    // ignoring the duplicate values
                     while (mid < right && nums[mid] == nums[mid + 1]) {
                         mid++;
                     }
-
+                    
+                    // ignoring the duplicate values
                     while (mid < right && nums[right] == nums[right - 1]) {
                         right--;
                     }
-
+                    
+                    // moving the pointer to required value
                     mid++;
                     right--;
                 } else if (sum < 0) {
