@@ -27,24 +27,24 @@ Use two indices that move towards or away from each other to reduce redundant co
 
     **Solution:**
 
-    - Initialize `left=0` & `right=arr_length`
-    - Loop through the array while `left < right`
-    - For each loop
-        - find the sum of element at `left` & `right` index
-        - compare the sum with the `Target`
-        - if `Target == sum` return a list with `left + 1` and `right + 1`
-        - if `Target > sum` do `left + 1`
-        - if `Target < sum` do `right - 1`
+    1. Initialize `left=0` & `right=arr_length`
+    2. Loop through the array while `left < right`
+    3. For each loop
+        1. find the sum of element at `left` & `right` index
+        2. compare the sum with the `Target`
+        3. if `Target == sum` return a list with `left + 1` and `right + 1`
+        4. if `Target > sum` do `left + 1`
+        5. if `Target < sum` do `right - 1`
 
 2. Three Sum:
 
     Problem URL: [Three Sum](https://leetcode.com/problems/3sum/description/)
 
-    **Given**:
+    **Given:**
     
     - An array of integers
 
-    **Output**:
+    **Output:**
 
     An Array of Array with integers that sums up to zero, The array should contain duplicate arrays.
 
@@ -63,3 +63,28 @@ Use two indices that move towards or away from each other to reduce redundant co
        4. Finally do `mid++` and `right--`
     8. Else if `sum > 0` do `right--`
     9. Else do `mid++`
+ 
+3. Sort Colors
+
+    Problem URL: [Sort Colors](https://leetcode.com/problems/sort-colors/description/)
+
+    **Given:**
+
+    An Array of unordered integers.
+
+    **Output:**
+
+    As Array of sorted integers.
+
+    **Solution:**
+
+    1. Initialize `low = 0`, `mid = 0` & `high = len - 1`
+    2. Initialize a While loop with condition `mid <= high`
+    3. If `arr[mid] == 1` do `mid++`
+    4. Else If `arr[mid] == 0` do 
+       1. swap `arr[mid]` with `arr[left]`
+       2. increment `mid` by `1`
+       3. increment `left` by `1`
+    5. Else
+       1. swap `arr[mid]` with `arr[high]`
+       2. decrement `high` by `1`
