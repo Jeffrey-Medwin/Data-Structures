@@ -88,3 +88,24 @@ Use two indices that move towards or away from each other to reduce redundant co
     5. Else
        1. swap `arr[mid]` with `arr[high]`
        2. decrement `high` by `1`
+
+4. Move Zeros
+
+    Problem URL: (Move Zeros)[https://leetcode.com/problems/move-zeroes/description/]
+
+    **Given:**
+
+    An array of integers
+
+    **Output:**
+
+    Move the zeros in the array to the end without changing the order of non-zeros
+
+    **Solution:**
+
+    1. Initialize `left = 0` & `right = 0`
+    2. Initialize a while loop with condition `right < arr.len`
+    3. if `arr[right] != 0` do
+       1. swap `arr[right] & arr[left]`
+       2. increment `left`
+    4. increment `right`
