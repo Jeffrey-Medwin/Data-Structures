@@ -91,7 +91,7 @@ Use two indices that move towards or away from each other to reduce redundant co
 
 4. Move Zeros
 
-    Problem URL: (Move Zeros)[https://leetcode.com/problems/move-zeroes/description/]
+    Problem URL: [Move Zeros](https://leetcode.com/problems/move-zeroes/description/)
 
     **Given:**
 
@@ -109,3 +109,28 @@ Use two indices that move towards or away from each other to reduce redundant co
        1. swap `arr[right] & arr[left]`
        2. increment `left`
     4. increment `right`
+ 
+5. Container With Most Water
+
+   Problem URL: [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
+
+   **Given:**
+
+   An array with integers
+
+   **Output:**
+
+   Maximum area
+
+   **Solution:**
+
+   1. Initialize a int `maxWater` with minimum intger value
+   2. Initialize `left = 0` & `right = len - 1`
+   3. Initialize while loop with condition `left < right`
+      1. Initialize `length` by finding which is minimum between `arr[left]` & `arr[right]`
+      2. Initialize `breadth` as `right - left`
+      3. find the area `water = length * breadth`
+      4. compare `water` with `maxWater` and update `maxWater` with largest value
+      5. If `arr[left] == length` do `left++`
+      6. Else do `right--`
+   4. return `maxWater`
